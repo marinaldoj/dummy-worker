@@ -2,6 +2,7 @@
     margin: auto;
     max-width: 1920px;
     max-height: 1080px;
+    position: relative;
 }
 
 .body-content-group{
@@ -9,12 +10,19 @@
     height: 100vh;
     display: flex;
     flex-direction: column;  
+    padding: 200px 40px 40px  40px;
 }
 
 .container-logo{
     padding: 16px;
     font-size: 22px;
     font-weight: 500;
+    cursor: pointer;
+    
+}
+
+.container-logo:hover{
+    animation: LogoAnimation 1s infinite;
 }
 
 .container-logo span{
@@ -22,12 +30,20 @@
     font-weight: 700;
 }
 
-.container-menu{
+.container-menu-fixed{
+    position: fixed;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     padding: 0 40px;
+    width: 100%;
+    background-color: #fff;
+    z-index: 10;
+    padding-bottom: 20px;
+    box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.1);
 }
+
+
 .container-options-menu{
     display: flex;
     gap: 20px;
@@ -49,6 +65,11 @@
     padding: 10px;
     text-decoration: none;
     font-size: 14px;
+    transition: 0.3s;
+}
+
+.container-options-menu li a:hover{
+    background-color: #808080;
 }
 
 .container-info{
@@ -74,12 +95,17 @@
 }
 
 .know-more{
+    width: 60%;
     padding: 6px;
     background: none;
     border: 1px solid #000;
     border-radius: 4px;
     margin-top: 40px;
     transition: 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
 .know-more:hover{
@@ -87,8 +113,99 @@
 }
 
 .container-carrousel{
-    background-color: red;
     flex-grow: 1;
     position: relative;
+}
+
+.carrousel{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    bottom: 0;
+    left: 0;
+}
+
+.container-another-info{
+    flex-grow: 1;
+}
+
+.container-dummy-card{
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 40px;
+}
+
+
+.container-card{
+    width: 350px;
+    height: 500px;
+    border-radius: 10px;
+}
+
+.images-vertical-group{
+    border-radius: 10px;
+}
+
+.container-map{
+    display: flex;
+    width: 300px;
+    height: 300px;
+}
+
+.to-top{
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+}
+
+.to-top a{
     padding: 10px;
+    border-radius: 50px;
+    background-color: #e5e5e5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.to-top a:hover svg{
+    animation: arrowAnimation 0.2s infinite alternate;
+}
+
+.footer{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    border-top: 1px solid #e5e5e5;
+}
+
+@keyframes LogoAnimation {
+    0%{
+        font-family: 'Anton', sans-serif;
+    }
+    25%{
+        font-family: 'Nerko One', sans-serif;
+    }
+    50%{
+        font-family: 'Roboto', sans-serif;
+    }
+    75%{
+        font-family: 'Zen Dots', sans-serif;
+    }
+    100%{
+        font-family: 'Roboto Mono', sans-serif;
+    }
+}
+
+@keyframes arrowAnimation {
+    from {
+       transform: translateY(0px);
+    }
+    to {
+        transform: translateY(-4px);
+    }
 }
