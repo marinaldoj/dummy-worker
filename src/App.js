@@ -126,21 +126,22 @@ function App() {
             <button className="know-more"><MdKeyboardArrowDown size={16} />Saiba mais sobre o grupo</button>
           </div>
           <div className="container-carrousel">
-            <div className="carrousel">
+            <div className="container-card">
               <Swiper
-                effect={"coverflow"}
-                loop={true}
                 grabCursor={true}
-                centeredSlides={true}
-                slidesPerView={"auto"}
-                coverflowEffect={{
-                  rotate: 50,
-                  stretch: 0,
-                  depth: 100,
-                  modifier: 1,
-                  slideShadows: true,
+                loop={true}
+                effect={"creative"}
+                pagination={true}
+                creativeEffect={{
+                  prev: {
+                    shadow: true,
+                    translate: [0, 0, -400],
+                  },
+                  next: {
+                    translate: ["100%", 0, 0],
+                  },
                 }}
-                modules={[EffectCoverflow]}
+                modules={[EffectCreative]}
                 >
                   {mockImages && mockImages.map((mock, index) => {
                       return(
@@ -159,6 +160,18 @@ function App() {
           <div className="layer-info">
             <span className="title-base">Sectores de Atividade</span>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+          <div className="container-sectores-info">
+            <div className="drag-image">
+                <img src="https://dummyimage.com/440x640/ff7300/ffffff.png" alt="Imagem"/>
+                <span>Imagem 1</span>
+            </div>
+            {/* <div className="drag-image">
+                <span>Imagem 1</span>
+            </div>
+            <div className="drag-image">
+                <span>Imagem 1</span>
+            </div> */}
           </div>
         </div>
       </div>

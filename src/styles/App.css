@@ -183,6 +183,37 @@
     border-top: 1px solid #e5e5e5;
 }
 
+.container-sectores-info{
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.drag-image{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.drag-image img{
+    opacity: 0.5;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.drag-image img:hover{
+    opacity: 1;
+}
+
+.drag-image span{
+    position: absolute;
+    bottom: 10%;
+    left: 45%;
+}
+
 @keyframes LogoAnimation {
     0%{
         font-family: 'Anton', sans-serif;
