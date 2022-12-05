@@ -196,6 +196,7 @@
     align-items: center;
     justify-content: center;
     position: relative;
+    transition: 0.2s;
 }
 
 .drag-image img{
@@ -206,6 +207,12 @@
 
 .drag-image img:hover{
     opacity: 1;
+}
+
+.drag-image:hover span{
+    position: absolute;
+    bottom: 80%;
+    left: 45%;
 }
 
 .drag-image span{

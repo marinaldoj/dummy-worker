@@ -166,12 +166,14 @@ function App() {
                 <img src="https://dummyimage.com/440x640/ff7300/ffffff.png" alt="Imagem"/>
                 <span>Imagem 1</span>
             </div>
-            {/* <div className="drag-image">
+            <div className="drag-image">
+                <img src="https://dummyimage.com/440x640/ff7300/ffffff.png" alt="Imagem"/>
                 <span>Imagem 1</span>
             </div>
             <div className="drag-image">
+                <img src="https://dummyimage.com/440x640/ff7300/ffffff.png" alt="Imagem"/>
                 <span>Imagem 1</span>
-            </div> */}
+            </div>
           </div>
         </div>
       </div>
